@@ -1,0 +1,30 @@
+[debug] [2024-07-23T05:26:47.881Z] ----------------------------------------------------------------------
+[debug] [2024-07-23T05:26:47.883Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\My Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-23T05:26:47.883Z] CLI Version:   13.13.3
+[debug] [2024-07-23T05:26:47.884Z] Platform:      win32
+[debug] [2024-07-23T05:26:47.884Z] Node Version:  v18.18.2
+[debug] [2024-07-23T05:26:47.884Z] Time:          Tue Jul 23 2024 10:56:47 GMT+0530 (India Standard Time)
+[debug] [2024-07-23T05:26:47.884Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-23T05:26:47.970Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-23T05:26:47.971Z] > authorizing via signed-in user (jamodarpan99@gmail.com)
+[debug] [2024-07-23T05:26:47.971Z] [iam] checking project netflixgpt-18039 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-23T05:26:47.973Z] > refreshing access token with scopes: []
+[debug] [2024-07-23T05:26:47.974Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-07-23T05:26:47.975Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-23T05:27:00.144Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-07-23T05:27:00.144Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-07-23T05:27:00.158Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions [none]
+[debug] [2024-07-23T05:27:00.159Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions x-goog-quota-user=projects/netflixgpt-18039
+[debug] [2024-07-23T05:27:00.159Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-23T05:27:16.821Z] *** [apiv2] error from fetch(https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions, {"headers":{},"method":"POST","body":"{\"permissions\":[\"firebase.projects.get\",\"firebasehosting.sites.update\"]}"}): FetchError: request to https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions failed, reason: Client network socket disconnected before secure TLS connection was established
+[debug] [2024-07-23T05:27:16.823Z] [iam] error while checking permissions, command may fail: FirebaseError: Failed to make request to https://cloudresourcemanager.googleapis.com/v1/projects/netflixgpt-18039:testIamPermissions
+[debug] [2024-07-23T05:27:16.827Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflixgpt-18039 [none]
+[debug] [2024-07-23T05:27:31.458Z] *** [apiv2] error from fetch(https://firebase.googleapis.com/v1beta1/projects/netflixgpt-18039, {"headers":{},"method":"GET","signal":{}}): FetchError: request to https://firebase.googleapis.com/v1beta1/projects/netflixgpt-18039 failed, reason: socket hang up
+[debug] [2024-07-23T05:27:31.459Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/netflixgpt-18039 (original: request to https://firebase.googleapis.com/v1beta1/projects/netflixgpt-18039 failed, reason: socket hang up)
+[debug] [2024-07-23T05:27:36.476Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\My Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
